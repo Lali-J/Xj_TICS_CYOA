@@ -11,7 +11,7 @@ ss = False
 def tw(text):
     for char in text:
         print(char, end='', flush=True)
-        time.sleep(0.025)
+        time.sleep(0.050)
 
 def FriedChickenE():
     global escaped
@@ -101,7 +101,7 @@ def EndingEnd():
     elif escaped:
         tw("You have successfully escaped the classroom!\nCongratulations on your freedom!\n")
     else:
-        tw("Class has finally ended congradulations!\nUnfortuently you still have to see Mr. Marsh again in two days\n")
+        tw("Class has finally ended congradulations!\nUnfortunately you still have to see Mr. Marsh again in two days\n")
     playingsceneone = False
 
 tw("Welcome to the Choose Your Own Adventure game! \nYou are a student in Mr. Marsh's class, and you have 17 minutes left until the end of the school day. \nYour goal is to escape the classroom without getting caught by Mr. Marsh. \nGood luck!\nHit enter to start the game.\n")
@@ -112,7 +112,7 @@ while (playingsceneone):
     if chairFront:
         tw("You are now sitting in the chair of shame\nEvery move you now do is watched with extra caution\nSo make your choices wisely.")
     else:
-        tw("""The clock hits 3:00 \nYou stare at the classroom door \nFreedom is only twenty feet away and 17 minutes left\nUnfortunately, Mr. Marsh is standing directly in front of it\n"Before you leave,” he announces, “I have one very important thing to say.”\nThe entire class groans\nMr. Marsh smiles proudly\n"I am so good at this job."\nHe pauses dramatically\nThen he literally toots his own horn\nHONK!\nNobody knows where he got the tiny horn\nYou decide it is time to escape.\n""")
+        tw("""The clock hits 3:00 \nYou stare at the classroom door \nFreedom is only twenty feet away and 17 minutes left\nUnfortunately, Mr. Marsh is standing directly in front of it\n"Before you leave,” he announces, “I have one very important thing to say.”\nThe entire class groans\nMr. Marsh smiles proudly\n"I am so good at this job."\nHe pauses dramatically\nThen he literally toots his own horn\nHONK!\nNobody knows where he got the tiny horn\nYou decide it is time to escape.\n\n""")
     try:
         sceneOne = int(input("Do you want to: \n1. Sneak toward the door \n2. Compliment his teaching \n3. Investigate his desk while he's distracted \n4. Attempt to take a nap while he yaps\n"))
         if sceneOne != 1 and sceneOne != 2 and sceneOne != 3 and sceneOne != 4:
@@ -138,7 +138,7 @@ while (playingsceneone):
         else:
             DefensiveE()
     elif sceneOne == 2:
-        tw("""You decide its easier if you manipulate his ego, afterall he literally just tooted his own horn\n"Mr. Marsh you teach us so well!"\nHe stops, his eyes widen, you can start to see tears forming in his eyes\n"You really mean it"\n"Yeah" you say as you realized you have made a grave mistake\n"Well let me tell you how I raised the most insane Computer Science student of all time... His name was Grant"\nYou decide this isn't worth it anymore and evaluate your options of escape""")
+        tw("""You decide its easier if you manipulate his ego, afterall he literally just tooted his own horn\n"Mr. Marsh you teach us so well!"\nHe stops, his eyes widen, you can start to see tears forming in his eyes\n"You really mean it"\n"Yeah" you say as you realized you have made a grave mistake\n"Well let me tell you how I raised the most insane Computer Science student of all time... His name was Grant"\nYou decide this isn't worth it anymore and evaluate your options of escape\n""")
         try:
             a2 = int(input("Do you want to: \n1. Try to sleep with the tunes of his bragging\n2. Investigate his desk\n"))
             if a2 != 1 and a2 != 2:
