@@ -27,7 +27,7 @@ def FriedChickenE():
     EndingEnd()
 
 def DefensiveE():
-    hand = random.choice(inventoryB)
+    hand = random.choice(["Banana", "Pencil", "Fried Chicken"])
     if hand == "Banana":
         tw("A Banana\nYou throw the banana peel on the floor\nMr. Marsh slips on the banana peel and falls to the ground\nYou make a run for it and escape the classroom!\n")
         game["escaped"] = True
@@ -108,7 +108,9 @@ while game["playingsceneone"]:
     while True:
         try:
             sceneOne = int(input("Do you want to: \n1. Sneak toward the door \n2. Compliment his teaching \n3. Investigate his desk while he's distracted \n4. Attempt to take a nap while he yaps\n"))
-            if sceneOne != 1 and sceneOne != 2 and sceneOne != 3 and sceneOne != 4:
+            if sceneOne in (1,2,3,4):
+                break
+            else:
                 print("Please choose one of the four options with 1, 2, 3, or 4.")
         except ValueError:
             print("Please enter a valid number.")
@@ -121,7 +123,9 @@ while game["playingsceneone"]:
             while True:
                 try:
                     a1 = int(input("Do you want to: \n1. Run for it \n2. Claim you need to sharpen your pencil \n3. Use something from your inventory\n"))
-                    if a1 != 1 and a1 != 2 and a1 != 3:
+                    if a1 in (1,2,3):
+                        break
+                    else:
                         print("Please choose one of the three options with 1, 2, or 3.")
                 except ValueError:
                     print("Please enter a valid number.")
@@ -138,7 +142,9 @@ while game["playingsceneone"]:
         while True:
             try:
                 a2 = int(input("Do you want to: \n1. Try to sleep with the tunes of his bragging\n2. Investigate his desk\n"))
-                if a2 != 1 and a2 != 2:
+                if a2 in (1,2):
+                    break
+                else:
                     print("Please choose one of the two options with 1 or 2.")
             except ValueError:
                 print("Please enter a valid number.")
@@ -146,10 +152,7 @@ while game["playingsceneone"]:
             tw("As you start getting comfy Mr. Marsh notices and approaches\n")
             SleepyE()
         elif a2 == 2:
-            if game["chairFront"]:
-                tw("You tried going to his desks but Mr. Marsh saw you\n\"Go back to your seat!\"")
-            else:
-                InvestigateE()
+            InvestigateE()
 #Tried investigating his desk
     elif sceneOne == 3:
         if game["chairFront"]:
