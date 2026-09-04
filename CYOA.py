@@ -52,7 +52,7 @@ def SleepyE():
     elif wakeup == 1:
         tw("""He prepares himself for whats to come\n"DUDE YOUR MOMMY JUST CALLED"\n"You wake up slowly and Mr. Marsh looks disappointed"\nYou ask if you can go home then\nHe retorts with "If my mommy calls can I go home?"\nYou answer no and just look at each other\nHe got bored and goes back to teaching\n""")
     else:
-        tw("By some miracle you wake up and he never noticed that you were sleeping\nYour reputation as a good student is intact\n")
+        tw("By some miracle you wake up and he decided to instead leave you alone\n")
     escaped = False
     EndingEnd()
 
